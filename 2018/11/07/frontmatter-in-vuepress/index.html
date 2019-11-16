@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>react基础 | VuePress|Blog</title>
+    <meta name="description" content="This is a blog example built by VuePress">
+    
+    
+    <link rel="preload" href="/myblog1/assets/css/0.styles.3cf7a863.css" as="style"><link rel="preload" href="/myblog1/assets/js/app.9e9a07bc.js" as="script"><link rel="preload" href="/myblog1/assets/js/4.16a45d0c.js" as="script"><link rel="preload" href="/myblog1/assets/js/5.7b2b8839.js" as="script"><link rel="preload" href="/myblog1/assets/js/15.06c4f8ab.js" as="script"><link rel="prefetch" href="/myblog1/assets/js/1.1c973b55.js"><link rel="prefetch" href="/myblog1/assets/js/10.2cacd6b3.js"><link rel="prefetch" href="/myblog1/assets/js/11.89f6f0d5.js"><link rel="prefetch" href="/myblog1/assets/js/12.8b158bd2.js"><link rel="prefetch" href="/myblog1/assets/js/13.7e737c9f.js"><link rel="prefetch" href="/myblog1/assets/js/14.4614299e.js"><link rel="prefetch" href="/myblog1/assets/js/16.3f98523b.js"><link rel="prefetch" href="/myblog1/assets/js/6.ae0c2509.js"><link rel="prefetch" href="/myblog1/assets/js/7.32e76991.js"><link rel="prefetch" href="/myblog1/assets/js/8.af9841e4.js"><link rel="prefetch" href="/myblog1/assets/js/9.ecc54b1f.js"><link rel="prefetch" href="/myblog1/assets/js/vuejs-paginate.14c0cfca.js">
+    <link rel="stylesheet" href="/myblog1/assets/css/0.styles.3cf7a863.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuperess-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/myblog1/" class="nav-link home-link">VuePress|Blog
+        </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/myblog1/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/myblog1/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/myblog1/" class="nav-link mobile-home-link">VuePress|Blog
+      </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/myblog1/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/myblog1/tag/" class="nav-link">Tags</a></li></ul></div></div></div> <div class="content-wrapper"><div id="vuperess-theme-blog__post-layout"><div class="vuepress-blog-theme-content"><div class="content__default"><h1 id="react基础"><a href="#react基础" class="header-anchor">#</a> react基础</h1> <h2 id="基础内容"><a href="#基础内容" class="header-anchor">#</a> 基础内容</h2> <ul><li>环境基础</li> <li>项目架构</li> <li>组件化思维</li> <li>jsx语法</li> <li>react在chrome上的调试</li> <li>虚拟dom</li> <li>生命周期</li></ul> <h3 id="环境基础"><a href="#环境基础" class="header-anchor">#</a> 环境基础</h3> <h5 id="通过npm-node环境-安装cnpm"><a href="#通过npm-node环境-安装cnpm" class="header-anchor">#</a> 通过npm node环境(安装cnpm)</h5> <div class="language- extra-class"><pre class="language-text"><code>npm install -g cnpm --registry=https://registry.npm.taobao.org
+npm config set registry https://registry.npm.taobao.org
+</code></pre></div><h2 id="项目架构"><a href="#项目架构" class="header-anchor">#</a> 项目架构</h2> <p>快速构建React开发环境</p> <div class="language- extra-class"><pre class="language-text"><code>$ cnpm install -g create-react-app
+$ create-react-app my-app
+$ cd my-app/
+$ npm start
+</code></pre></div><h3 id="常用目录结构"><a href="#常用目录结构" class="header-anchor">#</a> 常用目录结构</h3> <h6 id="基本目录说明"><a href="#基本目录说明" class="header-anchor">#</a> 基本目录说明</h6> <div class="language- extra-class"><pre class="language-text"><code>├── README.md //关于项目的说明文件。
+├── package.json //node的包文件，关于项目的一些介绍及一些项目的指令等。
+├── config //配置文件
+│   ├── webpack.base.js //通用配置
+│   ├── webpack.prod.js //生产环境配置
+│   └── webpack.dev.js //开发环境配置
+├── public //公共资源
+│   ├── favicon.ico //项目图标
+│   ├── manifest.json//用于指定应用的显示名称、图标、应用入口文件地址及需要使用的设备权限等信息
+│   └── index.html
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js //项目测试文件
+│   ├── index.css
+│   ├── index.js //程序入口文件
+│   ├── logo.svg
+│   └── serviceWorker.js //常用于生产环境做资源缓存
+└── yarn.lock
+</code></pre></div><h3 id="组件化思维"><a href="#组件化思维" class="header-anchor">#</a> 组件化思维</h3> <blockquote><p>react组件化是把界面不断分解,分解为多个个小控件的相互组合,到不能再分割为止.</p></blockquote> <h5 id="组件化本质"><a href="#组件化本质" class="header-anchor">#</a> 组件化本质:</h5> <pre><code>组件化本质是面向对象的设计思想.组件化可以对应于 一个类，每个类都对外输出不变的接⼝，只要接⼝不变，类与类间的通讯可以根据接⼝进行，由此不同组件间的耦合度就降低了。
+优点:提高了组件的可用性和降低了单个组件的复杂度
+</code></pre> <h3 id="react-jsx"><a href="#react-jsx" class="header-anchor">#</a> React jsx</h3> <pre><code>react使用jsx来替代常规javascript
+</code></pre> <blockquote><p>优点:</p></blockquote> <ul><li>JSX执行更快,在编译为javascript代码后进行了优化</li> <li>它是类型安全,在编译过成功就能发现错误</li> <li>使用Jsx编写模板更加简单快速</li></ul> <h5 id="常用"><a href="#常用" class="header-anchor">#</a> 常用</h5> <blockquote><p>类html(dom及属性)</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>ReactDOM.render(
+    &lt;div&gt;
+    &lt;h2&gt;欢迎学习 React&lt;/h2&gt;
+    &lt;p data-myattribute = &quot;somevalue&quot;&gt;这是一个很不错的 JavaScript 库!&lt;/p&gt;
+    &lt;/div&gt;
+    ,
+    document.getElementById('example')
+);
+</code></pre></div><blockquote><p>js表达式
+可以在 JSX 中使用 JavaScript 表达式。表达式写在花括号 {} 中。
+(js表达式,三目运算,样式,注释,数组)</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>var myStyle = {
+    fontSize: 100,
+    color: '#FF0000'
+};
+ReactDOM.render(
+    &lt;div&gt;
+      &lt;h1&gt;{1+1}&lt;/h1&gt;
+      &lt;h2&gt;{i == 1 ? 'True!' : 'False'}&lt;/h2&gt;
+      &lt;h3 style = {myStyle}&gt;菜鸟教程&lt;/h3&gt;,
+        {/*注释...*/}
+        {arr.map((item,index)=&gt;{
+            &lt;p&gt;{{item.name}}&lt;/p&gt;
+        }}
+    &lt;/div&gt;
+    ,
+    document.getElementById('app')
+);
+</code></pre></div><h3 id="react在dom上的使用"><a href="#react在dom上的使用" class="header-anchor">#</a> React在DOM上的使用</h3> <ul><li>render()</li> <li>unmountComponentAtNode()</li> <li>findDomNode</li></ul> <blockquote><p>render()</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>ReactDOM.render(
+  element,
+  container,
+  [callback]
+)
+    ReactDOM.render(element,document.getElementById('app')
+)
+</code></pre></div><blockquote><p>unmountComponentAtNode(container)卸载组件</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>ReactDOM.unmountComponentAtNode(container)
+//移除已挂载的React组件，清除它的事件处理器和state
+有组件被卸载返回true,没有组件被卸载返回false
+
+</code></pre></div><blockquote><p>findDOMNode(component)</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>return:　
+返回对应浏览器生成的Dom //已挂载
+null //无
+//作用:从DOM中读取值(表单的值,计算dom元素尺寸)
+</code></pre></div><blockquote><p>react ref属性</p></blockquote> <h6 id="react提供的ref属性-表示对组件真正实例的引用也就是reactdom-render-返回的组件实例"><a href="#react提供的ref属性-表示对组件真正实例的引用也就是reactdom-render-返回的组件实例" class="header-anchor">#</a> react提供的ref属性,表示对组件真正实例的引用也就是ReactDOM.render()返回的组件实例;</h6> <ul><li>ReactDOM.render()渲染组件时返回的是组件实例；</li> <li>ref属性只能在当前组件被访问
+组件上和dom节点都可以使用</li> <li>ref 回调会在componentDidMount 或 componentDidUpdate 这些生命周期回调之前执行。</li> <li></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 给 h5 元素设置 ref &lt;a ref=&quot;update&quot;&gt;更新&lt;/a&gt;后，可以拿到它的真实 dom&lt;a&gt;更新&lt;/a&gt;。
+// 给组件设置ref&lt;Child ref = 'child'/&gt;后，拿到的是组件的实例(上图中的Constructor)
+componentDidMount(){
+    console.log(this.refs.child); // 访问挂载在组件上ref
+    console.log(this.refs.child.refs.update); // 访问挂载在dom元素上的ref
+  }
+</code></pre></div><p><strong>this.refs</strong> 和 <strong>ReactDOM.findDOMNode</strong>的区别</p> <ul><li>ref添加到Compoennt上获取的是Compoennt实例，添加到原生HTML上获取的是DOM；</li> <li>ReactDOM.findDOMNode，当参数是DOM，返回值就是该DOM；当参数是Component获取的是该Component render方法中的DOM</li> <li>二者主要区别在ref绑定在组件上的时候，this.refs获取到的是组件实例，ReactDOM.findDOMNode获取到的是dom节点。</li></ul> <h3 id="react在chrome上的调试"><a href="#react在chrome上的调试" class="header-anchor">#</a> react在chrome上的调试</h3> <ol><li>去github 下载react-devtool,</li> <li>进入react-devtools-master文件夹,用npm安装</li> <li>安装依赖成功后,打包扩展程序</li></ol> <div class="language- extra-class"><pre class="language-text"><code>npm run build:extension:chrome
+</code></pre></div><ol start="4"><li>生成一个新的文件夹，react-devtools -&gt; shells -&gt; chrome -&gt; build -&gt; unpacked文件夹</li> <li>打开chrome扩展程序chrome://extensions/，加载已解压的扩展程序(unpacked)，</li></ol> <h3 id="react-虚拟dom"><a href="#react-虚拟dom" class="header-anchor">#</a> react 虚拟dom</h3> <blockquote><p>原理 虚拟dom的diff算法</p></blockquote> <ol><li>React 通过 updateDepth 对 Virtual DOM 树进行层级控制，同一个父节点下的所有子节点。</li> <li>跨层级操作:React 只会简单的考虑同层级节点的位置变换，而对于不同层级的节点，只有创建和删除操作。</li> <li>同一层级:，React diff提供了三种节点操作，分别为：INSERT_MARKUP（插入）、MOVE_EXISTING（移动）和 REMOVE_允许开发者对同一层级的同组子节点，添加唯一 key 进行区分(NODE（删除）。</li> <li>允许开发者对同一层级的同组子节点，添加唯一 key 进行区分(优化相同节点的位置变化)</li></ol> <h3 id="react生命周期"><a href="#react生命周期" class="header-anchor">#</a> react生命周期</h3> <blockquote><p>组件初始化</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>//initialization
+setup props and state
+</code></pre></div><blockquote><p>组件的挂载(Mounting)阶段</p></blockquote> <h6 id="此阶段分为componentwillmount，render，componentdidmount三个时期。"><a href="#此阶段分为componentwillmount，render，componentdidmount三个时期。" class="header-anchor">#</a> 此阶段分为componentWillMount，render，componentDidMount三个时期。</h6> <ul><li>componentWillMount:
+在组件挂载到DOM前调用，且只会被调用一次</li> <li>render:
+根据组件的props和state（两者的重传递和重赋值，无论值是否有变化，都可以引起组件重新render） ，return 一个React元素（描述组件，即UI），不负责组件实际渲染工作，之后由React自身根据此元素去渲染出页面DOM。</li> <li>componentDidMount
+组件挂载到DOM后调用，且只会被调用一次</li></ul> <blockquote><p>组件更新(update)阶段
+造成组件重新render的情况</p></blockquote> <ol><li>父组件重新render引起子组件的重新render</li></ol> <ul><li>直接使用,每当父组件重新render导致的重传props，子组件将直接跟着重新渲染，无论props是否有变化。可通过shouldComponentUpdate方法优化。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>class Child extends Component {
+   shouldComponentUpdate(nextProps){ // 应该使用这个方法，否则无论props是否有变化都将会导致组件跟着重新渲染
+        if(nextProps.someThings === this.props.someThings){
+          return false
+        }
+    }
+    render() {
+        return &lt;div&gt;{this.props.someThings}&lt;/div&gt;
+    }
+}
+</code></pre></div><ul><li>在 componentWillReceiveProps方法中，将props转换成自己的state</li></ul> <div class="language- extra-class"><pre class="language-text"><code>class Child extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            someThings: props.someThings
+        };
+    }
+    componentWillReceiveProps(nextProps) { // 父组件重传props时就会调用这个方法
+        this.setState({someThings: nextProps.someThings});
+    }
+    render() {
+        return &lt;div&gt;{this.state.someThings}&lt;/div&gt;
+    }
+}
+//componentWillReceiveProps 判断props是否变化
+</code></pre></div><ol start="2"><li>组件本身调用setState，无论state有没有变化。可通过shouldComponentUpdate方法优化</li></ol> <div class="language- extra-class"><pre class="language-text"><code>class Child extends Component {
+   constructor(props) {
+        super(props);
+        this.state = {
+          someThings:1
+        }
+   }
+   shouldComponentUpdate(nextStates){ // 应该使用这个方法，否则无论state是否有变化都将会导致组件重新渲染
+        if(nextStates.someThings === this.state.someThings){
+          return false
+        }
+    }
+
+   handleClick = () =&gt; { // 虽然调用了setState ，但state并无变化
+        const preSomeThings = this.state.someThings
+         this.setState({
+            someThings: preSomeThings
+         })
+   }
+
+    render() {
+        return &lt;div onClick = {this.handleClick}&gt;{this.state.someThings}&lt;/div&gt;
+    }
+}
+</code></pre></div><p>componentWillReceiveProps--&gt;shouldComponentUpdate--&gt;componentWillUpdate--&gt;render--&gt;componentDidUpdate</p> <h5 id="shouldcomponentupdate-nextprops-nextstate"><a href="#shouldcomponentupdate-nextprops-nextstate" class="header-anchor">#</a> shouldComponentUpdate(nextProps, nextState)</h5> <pre><code>此方法通过比较nextProps，nextState及当前组件的this.props，this.state，返回true时当前组件将继续执行更新过程，返回false则当前组件更新停止，以此可用来减少组件的不必要渲染，优化组件性能。
+
+ps：这边也可以看出，就算componentWillReceiveProps()中执行了this.setState，更新了state，但在render前（如shouldComponentUpdate，componentWillUpdate），this.state依然指向更新前的state，不然nextState及当前组件的this.state的对比就一直是true了。
+</code></pre> <h5 id="componentwillupdate-nextprops-nextstate"><a href="#componentwillupdate-nextprops-nextstate" class="header-anchor">#</a> componentWillUpdate(nextProps, nextState)</h5> <pre><code>此方法在调用render方法前执行，在这边可执行一些组件更新发生前的工作，一般较少用。
+</code></pre> <h5 id="render"><a href="#render" class="header-anchor">#</a> render</h5> <pre><code>render方法在上文讲过，这边只是重新调用。
+</code></pre> <h5 id="componentdidupdate-prevprops-prevstate"><a href="#componentdidupdate-prevprops-prevstate" class="header-anchor">#</a> componentDidUpdate(prevProps, prevState)</h5> <pre><code>此方法在组件更新后被调用，可以操作组件更新的DOM，prevProps和prevState这两个参数指的是组件更新前的props和state
+</code></pre> <blockquote><p>卸载阶段</p></blockquote> <h5 id="componentwillunmount"><a href="#componentwillunmount" class="header-anchor">#</a> componentWillUnmount</h5> <ul><li>此方法在组件被卸载前调用，可以在这里执行一些清理工作，比如清楚组件中使用的定时器，清楚componentDidMount中手动创建的DOM元素等，以避免引起内存泄漏。</li></ul></div> <hr> <!----></div> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#基础内容" title="基础内容">基础内容</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#环境基础" title="环境基础">环境基础</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#项目架构" title="项目架构">项目架构</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#常用目录结构" title="常用目录结构">常用目录结构</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#组件化思维" title="组件化思维">组件化思维</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#react-jsx" title="React jsx">React jsx</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#react在dom上的使用" title="React在DOM上的使用">React在DOM上的使用</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#react在chrome上的调试" title="react在chrome上的调试">react在chrome上的调试</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#react-虚拟dom" title="react 虚拟dom">react 虚拟dom</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#react生命周期" title="react生命周期">react生命周期</a></div></div></div></div> <footer class="footer" data-v-636fb8e6><div class="footer-left-wrap" data-v-636fb8e6><ul class="contact" data-v-636fb8e6><li class="contact-item" data-v-636fb8e6><a href="https://github.com/ulivz" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-636fb8e6><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-636fb8e6><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-636fb8e6></path></svg>
+          
+        </a></li><li class="contact-item" data-v-636fb8e6><a href="https://twitter.com/_ulivz" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-636fb8e6><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter" data-v-636fb8e6><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" data-v-636fb8e6></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-636fb8e6><ul class="copyright" data-v-636fb8e6><li class="copyright-item" data-v-636fb8e6><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-636fb8e6>Privacy Policy</a></li><li class="copyright-item" data-v-636fb8e6><a href="/myblog1/2018/11/07/frontmatter-in-vuepress/.html" class="nav-link" data-v-636fb8e6>MIT Licensed | Copyright © 2018-present Vue.js</a></li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/myblog1/assets/js/app.9e9a07bc.js" defer></script><script src="/myblog1/assets/js/4.16a45d0c.js" defer></script><script src="/myblog1/assets/js/5.7b2b8839.js" defer></script><script src="/myblog1/assets/js/15.06c4f8ab.js" defer></script>
+  </body>
+</html>
